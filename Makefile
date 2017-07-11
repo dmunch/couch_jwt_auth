@@ -1,8 +1,8 @@
 NAME=couch_jwt_auth
-ERL=$(shell couch-config --erl-bin)
-ERLANG_VERSION=$(shell couch-config --erlang-version)
-COUCHDB_VERSION=$(shell couch-config --couch-version | sed 's/\+.*//')
-VERSION=1.0.1
+ERL=$(shell which erl)
+ERLANG_VERSION=$(shell erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().'  -noshell)
+COUCHDB_VERSION=$(shell cat /opt/couchdb/releases/start_erl.data | cut -d' ' -f2)
+VERSION=1.0.2
 PLUGIN_DIRS=ebin priv
 PLUGIN_VERSION_SLUG=$(NAME)-$(VERSION)-$(ERLANG_VERSION)-$(COUCHDB_VERSION)
 PLUGIN_DIST=$(PLUGIN_VERSION_SLUG)
