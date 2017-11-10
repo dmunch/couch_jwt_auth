@@ -22,7 +22,7 @@ site is just amazing and explains the concepts really well.
 
 2. Clone (download) the repo:
   ```
-  $ git clone https://github.com/softapalvelin/couch_jwt_auth.git
+  $ git clone https://github.com/dmunch/couch_jwt_auth.git
   ```
 
 3. Build the plugin files:
